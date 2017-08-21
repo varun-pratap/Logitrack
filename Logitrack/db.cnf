@@ -1,0 +1,5 @@
+[client]
+database = logitrack
+user = guido
+password = guido@123
+default-character-set = utf8

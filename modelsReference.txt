@@ -1,0 +1,15 @@
+SHIRT_SIZES = (
+    ('S', 'Small'),
+    ('M', 'Medium'),
+    ('L', 'Large'),
+)
+shirt_size = models.CharField(max_length=1, choices=SHIRT_SIZES)
+first_name = models.CharField(max_length=30)
+release_date = models.DateField()
+num_stars = models.IntegerField()
+name = models.CharField(max_length=100, primary_key=True)
+id = models.AutoField(primary_key=True)
+sites = models.ManyToManyField(Site)
+place = models.OneToOneField(Place)
+artist = models.ForeignKey(Musician, on_delete=models.CASCADE)
+email_address = models.EmailField()
